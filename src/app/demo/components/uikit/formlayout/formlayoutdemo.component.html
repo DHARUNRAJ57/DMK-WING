@@ -1,0 +1,382 @@
+<div class="layout-topbar " style="height:100px;background-image: linear-gradient(#e7e155, white);">
+	<img src="assets/demo/images/dmklogo.png" alt="..." width="100" >
+	<h1 style="font-size:45px;text-align:center;padding-left: 28%;"> DMK Engineer Wing </h1>
+</div>
+
+<div class="border-red-800 layout-sidebar " style="margin-top: 20px;padding-right: 50px;background-image: linear-gradient(#e7e155, white)">
+	<div class="flex flex-column gap-4 justify-content: center;" style="padding-top:40px;padding-left:20px;color:red">
+		<!-- <button pButton pRipple type="button"  label="Home" class="p-button-raised" style="background-color:#fa2837" (click)="toggle3(home)"></button>
+		<button pButton pRipple type="button" label="Dashboard" class="p-button-raised" style="background-color:#fa2837"></button>
+		<button pButton pRipple type="button" label="District admin" class="p-button-raised" (click)="toggle(districtadmin)" style="background-color:#fa2837"></button>
+		<button pButton pRipple type="button" label="Create Office Bearers" class="p-button-raised" (click)="toggle1(createdistrictadmin)" style="background-color:#fa2837"></button>
+		<button pButton pRipple type="button" label="Self-Registration" class="p-button-raised" (click)="toggle2(selfregistration)" style="background-color:#fa2837"></button>
+		<button pButton pRipple type="button" label="Sign-in" class="p-button-raised" style="background-color:#fa2837" [routerLink]="['/']"></button> -->
+		<p class="text-xl  font-bold" (click)="toggle3(home)">HOME</p>
+		<p class="text-xl font-bold">SUPER ADMIN - DASHBOARD</p>
+		<p class="text-xl font-bold" (click)="toggle(districtadmin)">DISTRICT ADMIN</p>
+		<p class="text-xl font-bold" (click)="toggle1(createdistrictadmin)">CREATE OFFICE BEARERS</p>
+		<p class="text-xl  font-bold" (click)="toggle2(selfregistration)">SELF-REGISTRATION</p>
+		<p class="text-xl font-bold" [routerLink]="['/']">SIGN-IN</p>
+
+	</div>
+</div>
+
+<div  style="background: linear-gradient(#f52003c9,rgb(228, 206, 44), rgb(92, 84, 84) );padding-top: 109px;">
+	<!-- <div class="flex flex-wrap gap-2" style="margin-left:30px;margin-top:9px;margin-bottom: 5px;padding-left: 300px;">
+			<button pButton pRipple type="button" icon="pi pi-fw pi-home" label="Home" class="p-button-raised" style="background-color:#fa2837" (click)="toggle3(home)"></button>
+				<button pButton pRipple type="button" label="Dashboard" class="p-button-raised" style="background-color:#fa2837"></button>
+				<button pButton pRipple type="button" label="District admin" class="p-button-raised" (click)="toggle(districtadmin)" style="background-color:#fa2837"></button>
+				<button pButton pRipple type="button" label="Create Office Bearers" class="p-button-raised" (click)="toggle1(createdistrictadmin)" style="background-color:#fa2837"></button>
+				<button pButton pRipple type="button" label="Self-Registration" class="p-button-raised" (click)="toggle2(selfregistration)" style="background-color:#fa2837"></button>
+				<button pButton pRipple type="button" label="Sign-in" class="p-button-raised" style="background-color:#fa2837" [routerLink]="['/']"></button>
+	</div> -->
+
+
+	<div *ngIf="home" style="padding-left:380px;height: 600px;">
+		<img src="assets/demo/images/banner.png" alt="..." width="98%" height="80%" >
+	</div>
+	
+	
+	
+
+
+
+
+	<div *ngIf="districtadmin" class="col-12 md:col-6" style="padding-left:380px">
+		<div class="card p-fluid" style="width:900px">
+			<h5>District Admin Information</h5>
+			<div class="field grid">
+			  <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">First Name</label>
+				 <div class="col-12 md:col-10">
+					<input pInputText id="name3" type="text" />
+				</div>
+			</div>
+			<div class="field grid">
+				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Last Name</label>
+				<div class="col-12 md:col-10">
+					<input pInputText id="email3" type="text" />
+				</div>
+			</div>
+			<div class="field grid">
+				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Designation</label>
+				<div class="col-12 md:col-10">
+					<input pInputText id="email3" type="text" />
+				</div>
+			</div>
+			<div class="field grid">
+				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">District</label>
+				<div class="col-12 md:col-10">
+					<p-dropdown [options]="cities" [(ngModel)]="selectedDrop" placeholder="Select a City" [showClear]="true"></p-dropdown>	
+				</div>
+			</div>
+			<div class="field grid">
+				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Mobile</label>
+				<div class="col-12 md:col-10">
+					<input pInputText id="email3" type="text" />
+				</div>
+			</div>
+			<div class="field grid">
+				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+				<div class="col-12 md:col-10">
+					<input pInputText id="email3" type="text" />
+				</div>
+			</div>
+
+			<div class="field grid">
+				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Status</label>
+			
+				<div class="col-12 md:col-4">
+						<div class="field-radiobutton" style="padding-top: 15px;">
+							<p-radioButton name="city" value="active" [(ngModel)]="valRadio"
+										id="city2"></p-radioButton>
+							<label for="city2">Active</label>
+						</div>
+						<div class="field-radiobutton">
+							<p-radioButton name="city" value="Inactive" [(ngModel)]="valRadio"
+										id="city2"></p-radioButton>
+							<label for="city2">Inactive</label>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div *ngIf="createdistrictadmin" class="col-12 md:col-6" style="padding-left:380px">
+			<div class="card p-fluid" style="width:900px">
+				<h5>Create Office Bearers </h5>
+					<div class="field grid">
+					<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">First Name</label>
+						<div class="col-12 md:col-10">
+							<input pInputText id="name3" type="text" />
+						</div>
+					</div>
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Last Name</label>
+					<div class="col-12 md:col-10">
+						<input pInputText id="email3" type="text" />
+					</div>
+				</div>
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Designation</label>
+					<div class="col-12 md:col-10">
+						<input pInputText id="email3" type="text" />
+					</div>
+				</div>
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Party Designation</label>
+					<div class="col-12 md:col-10">
+						<p-dropdown [options]="cities" [(ngModel)]="selectedDrop" placeholder="Select designation" [showClear]="true"></p-dropdown>	
+					</div>
+				</div>
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Mobile</label>
+					<div class="col-12 md:col-10">
+						<input pInputText id="email3" type="text" />
+					</div>
+				</div>
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+					<div class="col-12 md:col-10">
+						<input pInputText id="email3" type="text" />
+					</div>
+				</div>
+
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Status</label>
+				       <div class="col-12 md:col-4">
+								<div class="field-radiobutton" style="padding-top: 15px;">
+									<p-radioButton name="city" value="active" [(ngModel)]="valRadio"
+												id="city2"></p-radioButton>
+									<label for="city2">Active</label>
+								</div>
+								<div class="field-radiobutton">
+									<p-radioButton name="city" value="Inactive" [(ngModel)]="valRadio"
+												id="city2"></p-radioButton>
+									<label for="city2">Inactive</label>
+								</div>
+								<div class="field-radiobutton">
+									<p-radioButton name="city" value="Awaiting approval" [(ngModel)]="valRadio"
+												id="city2"></p-radioButton>
+									<label for="city2">Awaiting approval</label>
+								</div>
+						</div>
+				</div>
+			</div>
+</div>
+
+<div *ngIf="selfregistration" class="col-12 md:col-6" style="padding-left:380px">
+	<div class="card p-fluid" style="width:900px">
+		<h5>Self Registration </h5>
+			<div class="field grid">
+			<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">First Name</label>
+				<div class="col-12 md:col-10">
+					<input pInputText id="name3" type="text" />
+				</div>
+			</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Last Name</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Degree</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Degree Major</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Date of Birth</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Mobile</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Parents Name</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Parents Mobile</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">District</label>
+			<div class="col-12 md:col-10">
+				<input pInputText id="email3" type="text" />
+			</div>
+		</div>
+		<div class="field grid">
+			<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Status</label>
+			   <div class="col-12 md:col-4">
+						<div class="field-radiobutton" style="padding-top: 15px;">
+							<p-radioButton name="city" value="active" [(ngModel)]="valRadio"
+										id="city2"></p-radioButton>
+							<label for="city2">Active</label>
+						</div>
+						<div class="field-radiobutton">
+							<p-radioButton name="city" value="Inactive" [(ngModel)]="valRadio"
+										id="city2"></p-radioButton>
+							<label for="city2">Inactive</label>
+						</div>
+						<div class="field-radiobutton">
+							<p-radioButton name="city" value="Awaiting approval" [(ngModel)]="valRadio"
+										id="city2"></p-radioButton>
+							<label for="city2">Awaiting approval</label>
+						</div>
+				</div>
+		</div>
+	</div>
+</div>
+</div>
+			
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <div *ngIf="districtadmin" class="col-12 md:col-6" style="margin:auto;padding-top: 30px;">
+		<div class="card">
+			<h5>Advanced</h5>
+			<div class="p-fluid p-formgrid grid">
+				<div class="field col-12 md:col-6">
+					<label htmlFor="firstname2">Firstname</label>
+					<input pInputText id="firstname2" type="text" />
+				</div>
+				<div class="field col-12 md:col-6">
+					<label htmlFor="lastname2">Lastname</label>
+					<input pInputText id="lastname2" type="text" />
+				</div>
+				<div class="field col-12">
+					<label htmlFor="address">Address</label>
+					<input pInputTextarea id="address" rows="4" />
+				</div>
+				<div class="field col-12 md:col-6">
+					<label htmlFor="city">City</label>
+					<input pInputText id="city" type="text" />
+				</div>
+				
+				<div class="field col-12 md:col-3">
+					<label htmlFor="state">State</label>
+					<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
+				</div>
+				<div class="field col-12 md:col-3">
+					<label htmlFor="zip">Zip</label>
+					<input pInputText id="zip" type="text" />
+				</div>
+			</div>
+				<button pButton label="Submit"></button>
+			</div>
+		</div>
+</div> -->
+
+
+<!-- <div class="grid">
+	<div class="col-12 md:col-6">
+		<div class="card p-fluid">
+			<h5>Vertical</h5>
+			<div class="field">
+				<label htmlFor="name1">Name</label>
+				<input pInputText id="name1" type="text" />
+			</div>
+			<div class="field">
+				<label htmlFor="email1">Email</label>
+				<input pInputText id="email1" type="text" />
+			</div>
+			<div class="field">
+				<label htmlFor="age1">Age</label>
+				<input pInputText id="age1" type="text" />
+			</div>
+		</div>
+		
+		<div class="card p-fluid">
+			<h5>Vertical Grid</h5>
+			<div class="p-formgrid grid">
+				<div class="field col">
+					<label htmlFor="name2">Name</label>
+					<input pInputText id="name2" type="text" />
+				</div>
+				<div class="field col">
+					<label htmlFor="email2">Email</label>
+					<input pInputText id="email2" type="text" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 md:col-6">
+		<div class="card p-fluid">
+			<h5>Horizontal</h5>
+			<div class="field grid">
+				<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">Name</label>
+				<div class="col-12 md:col-10">
+					<input pInputText id="name3" type="text" />
+				</div>
+			</div>
+			<div class="field grid">
+				<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+				<div class="col-12 md:col-10">
+					<input pInputText id="email3" type="text" />
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<h5>Inline</h5>
+			<div class="formgroup-inline">
+				<div class="field">
+					<label htmlFor="firstname1" class="p-sr-only">Firstname</label>
+					<input pInputText id="firstname1" type="text" placeholder="Firstname" />
+				</div>
+				<div class="field">
+					<label htmlFor="lastname1" class="p-sr-only">Lastname</label>
+					<input pInputText id="lastname1" type="text" placeholder="Lastname" />
+				</div>
+				<button pButton label="Submit"></button>
+			</div>
+		</div>
+
+		<div class="card">
+			<h5>Help Text</h5>
+			<div class="field p-fluid">
+				<label htmlFor="username">Username</label>
+				<input pInputText id="username" type="text" />
+				<small>Enter your username to reset your password.</small>
+			</div>
+		</div>
+	</div> -->
+
+	
+
+
+
