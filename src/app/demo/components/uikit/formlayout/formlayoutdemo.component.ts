@@ -7,11 +7,47 @@ export class FormLayoutDemoComponent {
 
     selectedState: any = null;
     cities:any[] = [
-        { label: 'New York', value: { id: 1, name: 'New York', code: 'NY' } },
-        { label: 'Rome', value: { id: 2, name: 'Rome', code: 'RM' } },
-        { label: 'London', value: { id: 3, name: 'London', code: 'LDN' } },
-        { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },
-        { label: 'Paris', value: { id: 5, name: 'Paris', code: 'PRS' } }
+        { label: 'Ariyalur', value: { id: 1, name: 'Ariyalur', code: 'AL' } },
+        { label: 'Chengalpattu', value: { id: 2, name: 'Chengalpattu', code: 'CP' } },
+        { label: 'Chennai', value: { id: 3, name: 'Chennai', code: 'CN' } },
+        { label: 'Coimbatore', value: { id: 4, name: 'Coimbatore', code: 'CB' } },
+        { label: 'Cuddalore', value: { id: 5, name: 'Cuddalore', code: 'CD' } },
+        { label: 'Dharmapuri', value: { id: 6, name: 'Dharmapuri', code: 'DP' } },
+        { label: 'Dindigul', value: { id: 7, name: 'Dindigul', code: 'DG' } },
+        { label: 'Erode', value: { id: 8, name: 'Erode', code: 'ED' } },
+        { label: 'Kallakurichi', value: { id: 9, name: 'Kallakurichi', code: 'KU' } },
+        { label: 'Kancheepuram', value: { id: 10, name: 'Kancheepuram', code: 'KC' } },
+        { label: 'Kanyakumari', value: { id: 11, name: 'Kanyakumari', code: 'KK' } },
+        { label: 'Karur', value: { id: 12, name: 'Karur', code: 'KR' } },
+        { label: 'Krishnagiri', value: { id: 13, name: 'Krishnagiri', code: 'KG' } },
+        { label: 'Madurai', value: { id: 14, name: 'Madurai', code: 'MD' } },
+        { label: 'Mayiladuthurai', value: { id: 15, name: 'Mayiladuthurai', code: 'MT' } },
+        { label: 'Nagapattinam', value: { id: 16, name: 'Nagapattinam', code: 'NP' } },
+        { label: 'Namakkal', value: { id: 17, name: 'Namakkal', code: 'NK' } },
+        { label: 'Perambalur', value: { id: 18, name: 'Perambalur', code: 'PB' } },
+        { label: 'Pudukottai', value: { id: 19, name: 'Pudukottai', code: 'PK' } },
+        { label: 'Ramanathapuram', value: { id: 18, name: 'Ramanathapuram', code: 'RT' } },
+        { label: 'Ranipet', value: { id: 20, name: 'Ranipet', code: 'RP' } },
+        { label: 'Salem', value: { id: 21, name: 'Salem', code: 'SL' } },
+        { label: 'Sivagangai', value: { id: 22, name: 'Sivagangai', code: 'SG' } },
+        { label: 'Tenkasi', value: { id: 23, name: 'Tenkasi', code: 'TS' } },
+        { label: 'Thanjavur', value: { id: 24, name: 'Thanjavur', code: 'TJ' } },
+        { label: 'Theni', value: { id: 26, name: 'Theni', code: 'TE' } },
+        { label: 'Thiruvallur', value: { id: 27, name: 'Thiruvallur', code: 'TL' } },
+        { label: 'Thiruvarur', value: { id: 28, name: 'Thiruvarur', code: 'TI' } },
+        { label: 'Thoothukudi', value: { id: 29, name: 'Thoothukudi', code: 'TK' } },
+        { label: 'Thiruchirappalli', value: { id: 30, name: 'Thiruchirappalli', code: 'TC' } },
+        { label: 'Thirunelveli', value: { id: 31, name: 'Thirunelveli', code: 'TN' } },
+        { label: 'Thirupathur', value: { id: 32, name: 'Thirupathur', code: 'TP' } },
+        { label: 'Thiruppur', value: { id: 33, name: 'Thiruppu', code: 'TR' } },
+        { label: 'Thiruvainnamala', value: { id: 34, name: 'Thiruvainnamala', code: 'TV' } },
+        { label: 'Nilgiris', value: { id: 35, name: 'Nilgiris', code: 'NG' } },
+        { label: 'Vellore', value: { id: 36, name: 'Vellore', code: 'VL' } },
+        { label: 'Viluppuram', value: { id: 37, name: 'Viluppuram', code: 'VP' } },
+        { label: 'Virudhunagar', value: { id: 38, name: 'Virudhunagar', code: 'VD' } }
+
+
+
     ];
     selectedDrop:any = { value: '' };
     districtadmin:boolean=false;
