@@ -14,12 +14,12 @@
 
 <div class="border-red-800 layout-sidebar " style="margin-top: 20px;padding-right: 50px;background-image: linear-gradient(#e7e155, white)">
 	<div class="flex flex-column gap-4 justify-content: center;" style="padding-top:40px;padding-left:20px;color:red">
-		<p class="text-xl  font-bold" (click)="toggle3(home)">HOME</p>
-		<p class="text-xl font-bold">ADMIN - DASHBOARD</p>
+		
+		<p class="text-xl font-bold" [routerLink]="['/']" >DASHBOARD </p>
 		<!-- <p class="text-xl font-bold" (click)="toggle(districtadmin)">DISTRICT ADMIN</p> -->
 		<p class="text-xl font-bold" (click)="toggle1(createdistrictadmin)">CREATE OFFICE BEARERS</p>
 		<!-- <p class="text-xl  font-bold" (click)="toggle2(selfregistration)">SELF-REGISTRATION</p> -->
-		<p class="text-xl font-bold" [routerLink]="['/']">SIGN-IN</p>
+		<p class="text-xl font-bold" [routerLink]="['/']">SIGN-OUT</p>
 
 	</div>
 </div>
@@ -99,59 +99,59 @@
 			<div class="card p-fluid" style="width:900px">
 				<h5>Create Office Bearers </h5>
 					<div class="field grid">
-					<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">First Name</label>
+					<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">First Name/முதல் பெயர்</label>
 						<div class="col-12 md:col-10">
 							<input pInputText id="name3" type="text" />
 						</div>
 					</div>
 				<div class="field grid">
-					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Last Name</label>
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Last Name/கடைசி பெயர்</label>
 					<div class="col-12 md:col-10">
 						<input pInputText id="email3" type="text" />
 					</div>
 				</div>
 				<div class="field grid">
-					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Designation</label>
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Designation/பதவி</label>
 					<div class="col-12 md:col-10">
 						<input pInputText id="email3" type="text" />
 					</div>
 				</div>
 				<div class="field grid">
-					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Party Designation</label>
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Party Designation/கட்சி பதவி</label>
 					<div class="col-12 md:col-10">
 						<p-dropdown [options]="cities" [(ngModel)]="selectedDrop" placeholder="Select designation" [showClear]="true"></p-dropdown>
 					</div>
 				</div>
 				<div class="field grid">
-					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Mobile</label>
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Mobile/கைபேசி</label>
 					<div class="col-12 md:col-10">
 						<input pInputText id="email3" type="text" />
 					</div>
 				</div>
 				<div class="field grid">
-					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Email/மின்னஞ்சல்</label>
 					<div class="col-12 md:col-10">
 						<input pInputText id="email3" type="text" />
 					</div>
 				</div>
 
 				<div class="field grid">
-					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Status</label>
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0">Status/நிலை</label>
 				       <div class="col-12 md:col-4">
 								<div class="field-radiobutton" style="padding-top: 15px;">
 									<p-radioButton name="city" value="active" [(ngModel)]="valRadio"
 												id="city2"></p-radioButton>
-									<label for="city2">Active</label>
+									<label for="city2">Active/செயலில்</label>
 								</div>
 								<div class="field-radiobutton">
 									<p-radioButton name="city" value="Inactive" [(ngModel)]="valRadio"
 												id="city2"></p-radioButton>
-									<label for="city2">Inactive</label>
+									<label for="city2">Inactive/செயலற்றது</label>
 								</div>
 								<div class="field-radiobutton">
 									<p-radioButton name="city" value="Awaiting approval" [(ngModel)]="valRadio"
 												id="city2"></p-radioButton>
-									<label for="city2">Awaiting approval</label>
+									<label for="city2">Awaiting approval/ஒப்புதலுக்காக காத்திருக்கிறது</label>
 								</div>
                                 <div>
                                     <button pButton pRipple label="Submit"></button>

@@ -6,6 +6,9 @@ import { ButtonModule } from 'primeng/button';
 import { ImageModule } from 'primeng/image';
 import { GalleriaModule } from 'primeng/galleria';
 import { CarouselModule } from 'primeng/carousel';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { InputTextareaModule } from "primeng/inputtextarea";
+import { InputTextModule } from "primeng/inputtext";
 
 @NgModule({
 	imports: [
@@ -14,7 +17,11 @@ import { CarouselModule } from 'primeng/carousel';
 		ButtonModule,
 		ImageModule,
 		GalleriaModule,
-		CarouselModule
+		CarouselModule,
+        RadioButtonModule,
+        InputTextareaModule,
+        InputTextModule
+
 	],
 	declarations: [MediaDemoComponent]
 })

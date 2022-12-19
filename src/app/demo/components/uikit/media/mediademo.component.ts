@@ -11,6 +11,7 @@ export class MediaDemoComponent implements OnInit {
     products!: Product[];
 
     images!: any[];
+    valRadio: string = '';
 
     galleriaResponsiveOptions: any[] = [
         {
@@ -49,6 +50,8 @@ export class MediaDemoComponent implements OnInit {
         }
     ];
 
+selfregistration: any;
+
     constructor(private productService: ProductService, private photoService: PhotoService) { }
 
     ngOnInit() {
@@ -60,5 +63,5 @@ export class MediaDemoComponent implements OnInit {
             this.images = images;
         });
     }
-    
+
 }

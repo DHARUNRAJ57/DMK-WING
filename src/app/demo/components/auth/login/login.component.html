@@ -7,7 +7,7 @@
                     <!-- <p-avatar icon="pi pi-user" pBadge value="4" severity="success" size="xlarge"></p-avatar> -->
                     <img src="assets/demo/images/dmklogo.png" alt="..." width="100px" >
 
-                    <div class="text-900 text-3xl font-medium mb-3">Welcome!</div>
+                    <div class="text-900 text-3xl font-medium mb-3">Welcome to DMK Engineer Wing Portal</div>
                     <div>
                         <h2 class="text-xl" (click)="user('admin')">Sign in as</h2>
                         <p-selectButton [options]="paymentOptions"  [(ngModel)]="user" optionLabel="name"></p-selectButton>
@@ -21,7 +21,7 @@
                                     <h5 for="email">Email</h5>
                                     <input type="text" id="email" name="email" formControlName="email" autocomplete="off" placeholder="Email address" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem">
                                     <!-- <small *ngIf="userForm.value.email.valid">Enter your username to reset your password.</small > -->
-                                </div>_
+                                </div>
 
                                 <label for="password"  class="block text-900 font-medium text-xl mb-2">Password</label>
                                 <p-password  id="password" name="password" formControlName="password" autocomplete="off" placeholder="Password" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem"></p-password>
@@ -41,6 +41,9 @@
                                     </ng-template>
 
                         </div>
+                        <div style="margin-right:150px;">
+                            <p-button label="Engineer Self Registration"  [routerLink]="['uikit/media']" styleClass="p-button-link"  ></p-button>
+                    </div>
                     </form>
             </div>
            <div style="padding-top:93px;background:rgb(3, 3, 3);width: max-content;"></div>
